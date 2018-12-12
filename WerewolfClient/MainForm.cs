@@ -399,5 +399,10 @@ namespace WerewolfClient
                 controller.ActionPerformed(wcmd);
             }
         }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

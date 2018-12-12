@@ -327,8 +327,7 @@ namespace WerewolfClient
             }
         }
 
-        public void JoinGame()
-        {
+        public void JoinGame()        {
             if (_player == null)
             {
                 _event = EventEnum.JoinGame;
@@ -391,7 +390,7 @@ namespace WerewolfClient
                 _player = playerEP.AddPlayer(p);
 
                 Console.WriteLine(_player.Id);
-                _event = EventEnum.SignIn;
+                _event = EventEnum.SignUp;
                 _eventPayloads["Success"] = TRUE;
             } catch (Exception ex)
             {

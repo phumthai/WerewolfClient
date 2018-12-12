@@ -41,7 +41,7 @@ namespace WerewolfClient
                     case WerewolfModel.EventEnum.SignUp:
                         if (wm.EventPayloads["Success"] == "True")
                         {
-                            MessageBox.Show("Sign up successfuly, please login", "Success", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                            MessageBox.Show("Sign up successfuly, please login", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
                         {
@@ -70,7 +70,14 @@ namespace WerewolfClient
             WerewolfCommand wcmd = new WerewolfCommand();
             wcmd.Action = WerewolfCommand.CommandEnum.SignUp;
             wcmd.Payloads = new Dictionary<string, string>() { { "Login", TbLogin.Text}, { "Password",TbPassword.Text}, { "Server", TBServer.Text } };
-            controller.ActionPerformed(wcmd);
+            if (TbLogin.Text == "" || TbPassword.Text == "")
+            {
+                MessageBox.Show("จงเติมคำในช่องว่าง","Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                controller.ActionPerformed(wcmd);
+            }
         }
     }
 }
