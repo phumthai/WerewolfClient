@@ -32,8 +32,8 @@ namespace WerewolfClient
 
             foreach (int i in Enumerable.Range(0, 16))
             {
-                this.Controls["GBPlayers"].Controls["BtnPlayer" + i].Click += new System.EventHandler(this.BtnPlayerX_Click);
-                this.Controls["GBPlayers"].Controls["BtnPlayer" + i].Tag = i;
+                this./*Controls["GBPlayers"].*/Controls["BtnPlayer" + i].Click += new System.EventHandler(this.BtnPlayerX_Click);
+                this./*Controls["GBPlayers"].*/Controls["BtnPlayer" + i].Tag = i;
             }
 
             _updateTimer = new Timer();
@@ -55,7 +55,9 @@ namespace WerewolfClient
 
         public void AddChatMessage(string str)
         {
+            TbChatBox.ForeColor = Color.Red;
             TbChatBox.AppendText(str + Environment.NewLine);
+            TbChatBox.ForeColor = Color.Red;
         }
 
         public void EnableButton(Button btn, bool state)
@@ -68,7 +70,7 @@ namespace WerewolfClient
             int i = 0;
             foreach (Player player in wm.Players)
             {
-                Controls["GBPlayers"].Controls["BtnPlayer" + i].Text = player.Name;
+                /*Controls["GBPlayers"].*/Controls["BtnPlayer" + i].Text = player.Name;
                 if (player.Name == wm.Player.Name || player.Status != Player.StatusEnum.Alive)
                 {
                     // FIXME, need to optimize this
@@ -125,7 +127,7 @@ namespace WerewolfClient
                             img = Properties.Resources.Icon_fool;
                             break;
                         case WerewolfModel.ROLE_HEAD_HUNTER:
-                            img = Properties.Resources.Icon_head_hunter;
+                            img = Properties.Resources.Icon_serial_killer;
                             break;
                         case WerewolfModel.ROLE_SERIAL_KILLER:
                             img = Properties.Resources.Icon_serial_killer;
@@ -134,7 +136,7 @@ namespace WerewolfClient
                             img = Properties.Resources.Icon_gunner;
                             break;
                     }
-                    ((Button)Controls["GBPlayers"].Controls["BtnPlayer" + i]).Image = img;
+                    ((Button)Controls["BtnPlayer" + i]).Image = img;
                 }
                 i++;
             }
@@ -194,6 +196,8 @@ namespace WerewolfClient
                                 BtnAction.Text = WerewolfModel.ACTION_KILL;
                                 break;
                             case WerewolfModel.ROLE_SEER:
+                                BtnAction.Text = WerewolfModel.ACTION_REVEAL;
+                                break;
                             case WerewolfModel.ROLE_WEREWOLF_SEER:
                                 BtnAction.Text = WerewolfModel.ACTION_REVEAL;
                                 break;
@@ -215,11 +219,13 @@ namespace WerewolfClient
                         AddChatMessage("Switch to day time of day #" + wm.EventPayloads["Game.Current.Day"] + ".");
                         _currentPeriod = Game.PeriodEnum.Day;
                         LBPeriod.Text = "Day time of";
+                        BG.Hide();
                         break;
                     case EventEnum.SwitchToNightTime:
                         AddChatMessage("Switch to night time of day #" + wm.EventPayloads["Game.Current.Day"] + ".");
                         _currentPeriod = Game.PeriodEnum.Night;
                         LBPeriod.Text = "Night time of";
+                        BG.Show();
                         break;
                     case EventEnum.UpdateDay:
                         // TODO  catch parse exception here

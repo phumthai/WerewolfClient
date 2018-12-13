@@ -35,11 +35,11 @@
             this.TbPassword = new System.Windows.Forms.TextBox();
             this.BtnSignIn = new System.Windows.Forms.Button();
             this.BtnSignUp = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.TBServer = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,7 +69,7 @@
             // 
             this.TbLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TbLogin.Location = new System.Drawing.Point(176, 194);
-            this.TbLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TbLogin.Margin = new System.Windows.Forms.Padding(4);
             this.TbLogin.Name = "TbLogin";
             this.TbLogin.Size = new System.Drawing.Size(363, 34);
             this.TbLogin.TabIndex = 2;
@@ -78,7 +78,7 @@
             // 
             this.TbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TbPassword.Location = new System.Drawing.Point(176, 246);
-            this.TbPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TbPassword.Margin = new System.Windows.Forms.Padding(4);
             this.TbPassword.Name = "TbPassword";
             this.TbPassword.PasswordChar = '*';
             this.TbPassword.Size = new System.Drawing.Size(363, 34);
@@ -88,7 +88,7 @@
             // 
             this.BtnSignIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSignIn.Location = new System.Drawing.Point(276, 303);
-            this.BtnSignIn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnSignIn.Margin = new System.Windows.Forms.Padding(4);
             this.BtnSignIn.Name = "BtnSignIn";
             this.BtnSignIn.Size = new System.Drawing.Size(125, 55);
             this.BtnSignIn.TabIndex = 4;
@@ -100,24 +100,13 @@
             // 
             this.BtnSignUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSignUp.Location = new System.Drawing.Point(143, 303);
-            this.BtnSignUp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnSignUp.Margin = new System.Windows.Forms.Padding(4);
             this.BtnSignUp.Name = "BtnSignUp";
             this.BtnSignUp.Size = new System.Drawing.Size(125, 55);
             this.BtnSignUp.TabIndex = 5;
             this.BtnSignUp.Text = "Sign Up";
             this.BtnSignUp.UseVisualStyleBackColor = true;
             this.BtnSignUp.Click += new System.EventHandler(this.BtnSignUp_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(232, 15);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(133, 114);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
             // 
             // label3
             // 
@@ -134,7 +123,7 @@
             // 
             this.TBServer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TBServer.Location = new System.Drawing.Point(176, 142);
-            this.TBServer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TBServer.Margin = new System.Windows.Forms.Padding(4);
             this.TBServer.Name = "TBServer";
             this.TBServer.Size = new System.Drawing.Size(363, 34);
             this.TBServer.TabIndex = 8;
@@ -142,13 +131,14 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.button1.Location = new System.Drawing.Point(19, 303);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(117, 53);
             this.button1.TabIndex = 9;
             this.button1.Text = "Tutorial";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
@@ -159,6 +149,17 @@
             this.button2.TabIndex = 10;
             this.button2.Text = "Character";
             this.button2.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(232, 15);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(133, 114);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
             // 
             // Login
             // 
@@ -176,7 +177,7 @@
             this.Controls.Add(this.TbLogin);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Login";
             this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
