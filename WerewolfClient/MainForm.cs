@@ -127,7 +127,7 @@ namespace WerewolfClient
                             img = Properties.Resources.Icon_fool;
                             break;
                         case WerewolfModel.ROLE_HEAD_HUNTER:
-                            img = Properties.Resources.Icon_serial_killer;
+                            img = Properties.Resources.Icon_head_hunter;
                             break;
                         case WerewolfModel.ROLE_SERIAL_KILLER:
                             img = Properties.Resources.Icon_serial_killer;

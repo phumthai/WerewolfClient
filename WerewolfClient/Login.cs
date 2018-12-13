@@ -79,5 +79,42 @@ namespace WerewolfClient
                 controller.ActionPerformed(wcmd);
             }
         }
+
+        private void server_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(server.Text == "User server")
+            {
+                TBServer.Text = "http://localhost:2343/werewolf/";
+            }
+            else if(server.Text == "2 Player")
+            {
+                TBServer.Text = "http://project-ile.net:2342/werewolf/";
+            }
+            else if (server.Text == "4 Player")
+            {
+                TBServer.Text = "http://project-ile.net:2344/werewolf/";
+            }
+            else if (server.Text == "16 Player")
+            {
+                TBServer.Text = "http://project-ile.net:23416/werewolf/";
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Tutorial Form1 = new Tutorial();
+            Form1.Visible = true;
+            Form1.Activate();
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            this.FormBorderStyle = FormBorderStyle.None;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

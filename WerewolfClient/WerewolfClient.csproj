@@ -46,12 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CharacterSelect.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CharacterSelect.Designer.cs">
-      <DependentUpon>CharacterSelect.cs</DependentUpon>
-    </Compile>
     <Compile Include="Controller.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -82,9 +76,6 @@
     <Compile Include="View.cs" />
     <Compile Include="WerewolfController.cs" />
     <Compile Include="WerewolfModel.cs" />
-    <EmbeddedResource Include="CharacterSelect.resx">
-      <DependentUpon>CharacterSelect.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -95,6 +86,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tutorial.aa.resx">
+      <DependentUpon>Tutorial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tutorial.resx">
       <DependentUpon>Tutorial.cs</DependentUpon>
@@ -120,6 +114,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <None Include="Resources\tutorial page\page 0.5 choose tutorial.png" />
     <None Include="Resources\villager_icon.png" />
     <None Include="Resources\day screen.png" />
     <None Include="Resources\char + BG\Icon_villager.png" />

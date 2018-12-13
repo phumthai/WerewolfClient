@@ -223,6 +223,16 @@ namespace WerewolfClient.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_jailer2 {
+            get {
+                object obj = ResourceManager.GetObject("Icon_jailer2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_medium {
             get {
                 object obj = ResourceManager.GetObject("Icon_medium", resourceCulture);
@@ -323,6 +333,16 @@ namespace WerewolfClient.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon_villager10 {
+            get {
+                object obj = ResourceManager.GetObject("Icon_villager10", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_villager2 {
             get {
                 object obj = ResourceManager.GetObject("Icon_villager2", resourceCulture);
@@ -336,6 +356,66 @@ namespace WerewolfClient.Properties {
         internal static System.Drawing.Bitmap Icon_villager3 {
             get {
                 object obj = ResourceManager.GetObject("Icon_villager3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_villager4 {
+            get {
+                object obj = ResourceManager.GetObject("Icon_villager4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_villager5 {
+            get {
+                object obj = ResourceManager.GetObject("Icon_villager5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_villager6 {
+            get {
+                object obj = ResourceManager.GetObject("Icon_villager6", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_villager7 {
+            get {
+                object obj = ResourceManager.GetObject("Icon_villager7", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_villager8 {
+            get {
+                object obj = ResourceManager.GetObject("Icon_villager8", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon_villager9 {
+            get {
+                object obj = ResourceManager.GetObject("Icon_villager9", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -406,6 +486,16 @@ namespace WerewolfClient.Properties {
         internal static System.Drawing.Bitmap night_screen {
             get {
                 object obj = ResourceManager.GetObject("night screen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap page_0_5_choose_tutorial {
+            get {
+                object obj = ResourceManager.GetObject("page 0.5 choose tutorial", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
