@@ -26,7 +26,10 @@ namespace WerewolfClient
         private string _myRole;
         private bool _isDead;
         private static bool ck2 = true;
-       private List<Player> players = null;
+        private static int ammo = 2;
+        private static bool firegun = false;
+        private static bool ck = false;
+        private List<Player> players = null;
 
         public MainForm()
         {
@@ -70,9 +73,11 @@ namespace WerewolfClient
         private void UpdateAvatar(WerewolfModel wm)
         {
             int i = 0;
-            bool ck = false;
+
             foreach (Player player in wm.Players)
             {
+
+                Console.WriteLine(player.Role);
                 /*Controls["GBPlayers"].*/
                 Controls["BtnPlayer" + i].Text = player.Name;
 
@@ -151,15 +156,6 @@ namespace WerewolfClient
                 {
                     Image img = Properties.Resources.Dead_Gun;
                     ((Button)Controls["BtnPlayer" + i]).Image = img;
-                    if(ck && ck2)
-                    {
-                        WerewolfCommand wcmd = new WerewolfCommand();
-                        wcmd.Action = CommandEnum.Chat;
-                        wcmd.Payloads = new Dictionary<string, string>() { { "Message", "I am a Gunner" } };
-                        controller.ActionPerformed(wcmd);
-                        ck = false;
-                        ck2 = false;
-                    }
                 }
                 if (player.Status == Player.StatusEnum.Holydead)
                 {
@@ -263,12 +259,21 @@ namespace WerewolfClient
                         AddChatMessage("Switch to day time of day #" + wm.EventPayloads["Game.Current.Day"] + ".");
                         _currentPeriod = Game.PeriodEnum.Day;
                         LBPeriod.Text = "Day time of";
+                        if (ck && ammo == 1)
+                        {
+                            BtnAction.Visible = true;
+                        }
                         BG.Hide();
                         break;
                     case EventEnum.SwitchToNightTime:
                         AddChatMessage("Switch to night time of day #" + wm.EventPayloads["Game.Current.Day"] + ".");
                         _currentPeriod = Game.PeriodEnum.Night;
                         LBPeriod.Text = "Night time of";
+                        firegun = false;
+                        if (ck && ammo == 1)
+                        {
+                            BtnAction.Visible = true;
+                        }
                         BG.Show();
                         break;
                     case EventEnum.UpdateDay:
@@ -309,6 +314,22 @@ namespace WerewolfClient
                         break;
                     case EventEnum.OtherShotDead:
                         AddChatMessage(wm.EventPayloads["Game.Target.Name"] + " was shot dead by gunner.");
+                        if (ck && ammo == 2)
+                        {
+                            WerewolfCommand wcmd = new WerewolfCommand();
+                            wcmd.Action = CommandEnum.Chat;
+                            wcmd.Payloads = new Dictionary<string, string>() { { "Message", "I am a Gunner" } };
+                            controller.ActionPerformed(wcmd);
+                            ammo--;
+                            BtnAction.Visible = false;
+                        }
+                        else if(ck && ammo == 1)
+                        {
+                            ammo--;
+                            BtnAction.Visible = false;
+                        }
+                        
+                        firegun = true;
                         break;
                     case EventEnum.Alive:
                         AddChatMessage(wm.EventPayloads["Game.Target.Name"] + " has been revived by medium.");
@@ -460,5 +481,7 @@ namespace WerewolfClient
         {
 
         }
+
+        
     }
 }
