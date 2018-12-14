@@ -1066,6 +1066,11 @@ namespace WerewolfAPI.Api
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
+            if(localVarStatusCode >= 400)
+            {
+                Exception exception = ExceptionFactory("LoginPlayer", localVarResponse);
+                throw exception;
+            }
 
             if (ExceptionFactory != null)
             {

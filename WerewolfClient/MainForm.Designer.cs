@@ -337,6 +337,7 @@
             this.TbChatInput.Name = "TbChatInput";
             this.TbChatInput.Size = new System.Drawing.Size(378, 30);
             this.TbChatInput.TabIndex = 1;
+            this.TbChatInput.TextChanged += new System.EventHandler(this.TbChatInput_TextChanged);
             this.TbChatInput.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TbChatInput_Enter);
             // 
             // GBAction

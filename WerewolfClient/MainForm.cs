@@ -26,6 +26,7 @@ namespace WerewolfClient
         private string _myRole;
         private bool _isDead;
         private List<Player> players = null;
+        
         public MainForm()
         {
             InitializeComponent();
@@ -68,9 +69,13 @@ namespace WerewolfClient
         private void UpdateAvatar(WerewolfModel wm)
         {
             int i = 0;
+            bool ck = false;
+            bool ck2 = false;
             foreach (Player player in wm.Players)
             {
-                /*Controls["GBPlayers"].*/Controls["BtnPlayer" + i].Text = player.Name;
+                /*Controls["GBPlayers"].*/
+                Controls["BtnPlayer" + i].Text = player.Name;
+
                 if (player.Name == wm.Player.Name || player.Status != Player.StatusEnum.Alive)
                 {
                     // FIXME, need to optimize this
@@ -86,8 +91,10 @@ namespace WerewolfClient
                     }
                     else
                     {
-                        continue;
+                        goto endloop;
+                       
                     }
+
                     switch (role)
                     {
                         case WerewolfModel.ROLE_SEER:
@@ -134,9 +141,24 @@ namespace WerewolfClient
                             break;
                         case WerewolfModel.ROLE_GUNNER:
                             img = Properties.Resources.Icon_gunner;
+                            ck = true;
                             break;
                     }
                     ((Button)Controls["BtnPlayer" + i]).Image = img;
+                }
+                endloop:
+                if (player.Status == Player.StatusEnum.Shotdead)
+                {
+                    Image img = Properties.Resources.Icon_wolf_shaman1;
+                    ((Button)Controls["BtnPlayer" + i]).Image = img;
+                    if(ck == true && ck2 == false )
+                    {
+                        WerewolfCommand wcmd = new WerewolfCommand();
+                        wcmd.Action = CommandEnum.Chat;
+                        wcmd.Payloads = new Dictionary<string, string>() { { "Message", "I am a Gunner" } };
+                        controller.ActionPerformed(wcmd);
+                        ck2 = true;
+                    }
                 }
                 i++;
             }
@@ -337,6 +359,7 @@ namespace WerewolfClient
 
         private void BtnAction_Click(object sender, EventArgs e)
         {
+
             if (_isDead)
             {
                 AddChatMessage("You're dead!!");
@@ -407,6 +430,11 @@ namespace WerewolfClient
         }
 
         private void MainForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TbChatInput_TextChanged(object sender, EventArgs e)
         {
 
         }

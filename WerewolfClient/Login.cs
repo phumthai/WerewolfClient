@@ -62,7 +62,14 @@ namespace WerewolfClient
             WerewolfCommand wcmd = new WerewolfCommand();
             wcmd.Action = WerewolfCommand.CommandEnum.SignIn;
             wcmd.Payloads = new Dictionary<string, string>() { { "Login", TbLogin.Text }, { "Password", TbPassword.Text }, { "Server", TBServer.Text } };
-            controller.ActionPerformed(wcmd);
+            if (TbLogin.Text == "" || TbPassword.Text == "")
+            {
+                MessageBox.Show("จงเติมคำในช่องว่าง", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                controller.ActionPerformed(wcmd);
+            }
         }
 
         private void BtnSignUp_Click(object sender, EventArgs e)
