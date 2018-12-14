@@ -506,9 +506,10 @@
             this.Controls.Add(this.GBChat);
             this.Controls.Add(this.GBStatus);
             this.Controls.Add(this.BG);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";
-            this.Text = "Werewolf Client";
+            this.Text = "Werewolf Game";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.BG)).EndInit();

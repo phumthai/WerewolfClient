@@ -58,6 +58,8 @@ namespace WerewolfClient
             Alive = 15,
             Chat = 16,
             ChatMessage = 17,
+            HolyDead = 18 ,
+            KillDead = 19,
         }
         public const string ROLE_SEER = "Seer";
         public const string ROLE_AURA_SEER = "Aura Seer";
@@ -239,6 +241,19 @@ namespace WerewolfClient
                                 }
                                 NotifyAll();
                             }
+                            if (player.Status == Player.StatusEnum.Holydead && prevPlayer.Status != Player.StatusEnum.Holydead)
+                            {
+                                _event = EventEnum.HolyDead;
+                                _eventPayloads["Game.Target.Id"] = player.Id.ToString();
+                                _eventPayloads["Game.Target.Name"] = player.Name;
+                            }
+                            if (player.Status == Player.StatusEnum.Killdead && prevPlayer.Status != Player.StatusEnum.Killdead)
+                            {
+                                _event = EventEnum.KillDead;
+                                _eventPayloads["Game.Target.Id"] = player.Id.ToString();
+                                _eventPayloads["Game.Target.Name"] = player.Name;
+                            }
+                            NotifyAll();
                             if (player.Status == Player.StatusEnum.Alive && prevPlayer.Status != Player.StatusEnum.Alive)
                             {
                                 _event = EventEnum.Alive;
