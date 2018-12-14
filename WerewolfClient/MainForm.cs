@@ -25,8 +25,9 @@ namespace WerewolfClient
         private bool _actionActivated;
         private string _myRole;
         private bool _isDead;
-        private List<Player> players = null;
-        
+        private static bool ck2 = true;
+       private List<Player> players = null;
+
         public MainForm()
         {
             InitializeComponent();
@@ -70,7 +71,6 @@ namespace WerewolfClient
         {
             int i = 0;
             bool ck = false;
-            bool ck2 = false;
             foreach (Player player in wm.Players)
             {
                 /*Controls["GBPlayers"].*/
@@ -149,16 +149,38 @@ namespace WerewolfClient
                 endloop:
                 if (player.Status == Player.StatusEnum.Shotdead)
                 {
-                    Image img = Properties.Resources.Icon_wolf_shaman1;
+                    Image img = Properties.Resources.Dead_Gun;
                     ((Button)Controls["BtnPlayer" + i]).Image = img;
-                    if(ck == true && ck2 == false )
+                    if(ck && ck2)
                     {
                         WerewolfCommand wcmd = new WerewolfCommand();
                         wcmd.Action = CommandEnum.Chat;
                         wcmd.Payloads = new Dictionary<string, string>() { { "Message", "I am a Gunner" } };
                         controller.ActionPerformed(wcmd);
-                        ck2 = true;
+                        ck = false;
+                        ck2 = false;
                     }
+                }
+                if (player.Status == Player.StatusEnum.Holydead)
+                {
+                    Image img = Properties.Resources.Dead_Holy;
+                    ((Button)Controls["BtnPlayer" + i]).Image = img;
+                }
+                if (player.Status == Player.StatusEnum.Killdead)
+                {
+                    Image img = Properties.Resources.Dead_Killer;
+                    ((Button)Controls["BtnPlayer" + i]).Image = img;
+                }
+                if (player.Status == Player.StatusEnum.Votedead)
+                {
+                    Image img = Properties.Resources.Dead_votedead;
+                    ((Button)Controls["BtnPlayer" + i]).Image = img;
+
+                }
+                if (player.Status == Player.StatusEnum.Jaildead)
+                {
+                    Image img = Properties.Resources.Dead_Jail;
+                    ((Button)Controls["BtnPlayer" + i]).Image = img;
                 }
                 i++;
             }
@@ -431,7 +453,7 @@ namespace WerewolfClient
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
         private void TbChatInput_TextChanged(object sender, EventArgs e)

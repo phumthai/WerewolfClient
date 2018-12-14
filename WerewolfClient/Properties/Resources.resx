@@ -121,17 +121,20 @@
   <data name="Icon_villager1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\char + BG\Icon_villager.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Icon_villager8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_villager.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Icon_werewolf1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon_werewolf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Icon_villager6" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icon_villager.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Icon_alpha_werewolf1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon_alpha_werewolf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Icon_doctor1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon_doctor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Dead_Killer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Dead_Killer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Icon_villager9" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon_villager.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -141,6 +144,9 @@
   </data>
   <data name="Icon_alpha_werewolf" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon_alpha_werewolf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="day screen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\day screen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Icon_jailer1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon_jailer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -172,11 +178,17 @@
   <data name="Icon_seer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon_seer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Dead_vote" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Dead_vote.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Dead_Wolf" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Dead_Wolf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Icon_medium1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon_medium.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Icon_villager5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icon_villager.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Dead_Jail" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Dead_Jail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Icon_priest" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon_priest.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -202,8 +214,8 @@
   <data name="Icon_gunner1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon_gunner.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="day screen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\day screen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Icon_villager6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_villager.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Icon_serial_killer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon_serial_killer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -217,7 +229,10 @@
   <data name="Icon_aura_seer1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon_aura_seer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Icon_villager8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="Dead_Gun" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Dead_Gun.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Icon_villager5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon_villager.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Icon_jailer" type="System.Resources.ResXFileRef, System.Windows.Forms">
@@ -225,6 +240,9 @@
   </data>
   <data name="Icon_bodyguard" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon_bodyguard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Dead_Holy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Dead_Holy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Icon_medium" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon_medium.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -253,7 +271,7 @@
   <data name="night screen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\night screen.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Icon_villager10" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icon_villager.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Dead_votedead" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Dead_votedead.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

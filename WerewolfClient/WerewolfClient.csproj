@@ -114,10 +114,24 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <None Include="Resources\jail_dead 77.png" />
+    <None Include="Resources\vote_death 77.png" />
+    <None Include="Resources\wolfkill_death 77.png" />
+    <None Include="Resources\shoot_death 77.png" />
     <None Include="Resources\tutorial page\page 0.5 choose tutorial.png" />
     <None Include="Resources\villager_icon.png" />
     <None Include="Resources\day screen.png" />
     <None Include="Resources\char + BG\Icon_villager.png" />
+    <None Include="Resources\dead_icon\holy_dead 77.png" />
+    <None Include="Resources\dead_icon\killer_dead. 77png.png" />
+    <None Include="Resources\GunnerDead.png" />
+    <None Include="Resources\Dead_Gun.png" />
+    <None Include="Resources\Dead_Holy.png" />
+    <None Include="Resources\Dead_Killer.png" />
+    <None Include="Resources\Dead_vote.png" />
+    <None Include="Resources\Dead_Wolf.png" />
+    <None Include="Resources\Dead_Jail.png" />
+    <None Include="Resources\Dead_votedead.png" />
     <Content Include="Resources\Icon_alpha_werewolf.png" />
     <Content Include="Resources\Icon_aura_seer.png" />
     <Content Include="Resources\Icon_bodyguard.png" />

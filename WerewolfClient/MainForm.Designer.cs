@@ -292,7 +292,7 @@
             this.BtnPlayer0.FlatAppearance.BorderSize = 0;
             this.BtnPlayer0.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Control;
             this.BtnPlayer0.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
-            this.BtnPlayer0.Image = global::WerewolfClient.Properties.Resources.Icon_villager5;
+            this.BtnPlayer0.Image = global::WerewolfClient.Properties.Resources.Icon_villager6;
             this.BtnPlayer0.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BtnPlayer0.Location = new System.Drawing.Point(14, 83);
             this.BtnPlayer0.Margin = new System.Windows.Forms.Padding(4);
